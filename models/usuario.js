@@ -18,10 +18,6 @@ const UsuarioSchema = Schema({
     type: Boolean,
     default: false
   },
-  puesto: {
-    typo: String,
-    required: true
-  }
 });
 
 // Personalización del metodo de salida
