@@ -1,0 +1,9 @@
+SERIE DE COMANDOS A TENER EN CUENTA PARA LA BASE DEL SERVER ------------------------
+
+npm install
+npm i -s express dotenv bcryptjs cors express-validator jsonwebtoken mongoose socket.io
+
+
+
+PARA EJECUTAR SERVIDOR DE DESA: ----------------------------------------------------
+npm run start:dev
