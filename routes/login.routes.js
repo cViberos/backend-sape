@@ -1,5 +1,5 @@
 /**
- * path: /api/login
+ * path: /api/users
  */
 
 const { Router } = require('express');
@@ -20,7 +20,7 @@ router.post( '/new', [
 ] ,crearUsuario);
 
 // LOGIN
-router.post( '/', [
+router.post( '/login', [
   check('password','La contraseña es obligatoria').not().isEmpty(),
   check('email','El email es obligatorio').isEmail()
 ] ,login);
