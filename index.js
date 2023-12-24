@@ -20,7 +20,6 @@ require('./sockets/socket.js');
 
 // MIS RUTAS
 app.use( '/api/users', require('./routes/login.routes.js') );
-app.use( '/api/pagos', require('./routes/pagos.routes.js') );
 
 
 // CORREMOS EL SERVIDOR
