@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 
-// DB CONFIGURACION
+// CONFIGURACION DE LA BASE DE DATOS
 require('./database/dbconfig').dbConnection();
 
 // APP DE EXPRESS
@@ -19,7 +19,8 @@ module.exports.io = require('socket.io')(server);
 require('./sockets/socket.js');
 
 // MIS RUTAS
-app.use( '/api/login', require('./routes/routes.js') );
+app.use( '/api/users', require('./routes/login.routes.js') );
+app.use( '/api/pagos', require('./routes/pagos.routes.js') );
 
 
 // CORREMOS EL SERVIDOR
