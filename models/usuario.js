@@ -14,6 +14,10 @@ const UsuarioSchema = Schema({
     required: true,
     unique: true
   },
+  rol: {
+    type: String,
+    required: true
+  },
   password: {
     type: String,
     required: true
