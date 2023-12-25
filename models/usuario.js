@@ -5,7 +5,7 @@ const UsuarioSchema = Schema({
     type: String,
     required:true
   },
-  lastname: {
+  apellido: {
     type: String,
     required:true
   },
@@ -15,8 +15,12 @@ const UsuarioSchema = Schema({
     unique: true
   },
   rol: {
-    type: String,
+    type: Int16Array,
     required: true
+  },
+  phone:{
+    type: String,
+    require: false
   },
   password: {
     type: String,
@@ -32,7 +36,7 @@ const UsuarioSchema = Schema({
 UsuarioSchema.method('toJSON', function() {
   // Indicamos todas las propiedades que no queremos que aparezcan, luego
   // ...object , indicamos que el resto de propiedades que tenga el objeto se almacena en object
-  const { __v, id, password, ...object } = this.toObject();
+  const {id, password, ...object } = this.toObject();
   // Creamos una propiedad y le asignamos el valor _id
   object.uid = id;
   // devolvemos el objeto resultante
