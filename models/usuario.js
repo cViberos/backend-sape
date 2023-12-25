@@ -15,7 +15,7 @@ const UsuarioSchema = Schema({
     unique: true
   },
   rol: {
-    type: int,
+    type: Int32Array,
     required: true
   },
   phone:{
