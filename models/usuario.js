@@ -36,9 +36,9 @@ const UsuarioSchema = Schema({
 UsuarioSchema.method('toJSON', function() {
   // Indicamos todas las propiedades que no queremos que aparezcan, luego
   // ...object , indicamos que el resto de propiedades que tenga el objeto se almacena en object
-  const {id, password, ...object } = this.toObject();
+  const {__v, _id, password, ...object } = this.toObject();
   // Creamos una propiedad y le asignamos el valor _id
-  object.uid = id;
+  object.uid = _id;
   // devolvemos el objeto resultante
   return object;
 });
