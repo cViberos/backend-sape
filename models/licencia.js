@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const DeviceSchema = Schema({
+const LicenciaSchema = Schema({
   platformtype: {
     type: String,
     required: false,
@@ -17,7 +17,7 @@ const DeviceSchema = Schema({
 });
 
 // Personalización del metodo de salida
-DeviceSchema.method('toJSON', function() {
+LicenciaSchema.method('toJSON', function() {
   // Indicamos todas las propiedades que no queremos que aparezcan, luego
   // ...object , indicamos que el resto de propiedades que tenga el objeto se almacena en object
   const {__v, _id, ...object } = this.toObject();
@@ -27,4 +27,4 @@ DeviceSchema.method('toJSON', function() {
   return object;
 });
 
-module.exports = model('divice', DeviceSchema);
+module.exports = model('licencia', LicenciaSchema);
