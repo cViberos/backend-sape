@@ -1,16 +1,15 @@
 const { Schema, model } = require('mongoose');
 
 const LicenciaSchema = Schema({
-  platformtype: {
+  programa: {
     type: String,
-    required: false,
-    unique: true
+    required: true,
   },
-  name: {
+  vigencia: {
     type: String,
     required:true
   },
-  deviceId: {
+  cantidad: {
     type: String,
     required:true
   },

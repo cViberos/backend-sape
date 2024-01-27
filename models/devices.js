@@ -3,15 +3,15 @@ const { Schema, model } = require('mongoose');
 const DeviceSchema = Schema({
   platformtype: {
     type: String,
-    required: false,
-    unique: true
-  },
-  name: {
-    type: String,
-    required:true
+    required: false
   },
   deviceId: {
     type: String,
+    required:true,
+    unique: true
+  },
+  estado: {
+    type: Boolean,
     required:true
   },
 });

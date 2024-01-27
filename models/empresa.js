@@ -5,13 +5,9 @@ const EmpresaSchema = Schema({
     type: String,
     required:true
   },
-  nombre: {
+  titular: {
     type: String,
-    required:true
-  },
-  apellido: {
-    type: String,
-    required:true
+    required:false
   },
   email: {
     type: String,
@@ -25,7 +21,7 @@ const EmpresaSchema = Schema({
   webpage: {
     type: String,
     required: false,
-    unique: true
+    unique: false
   },
 });
 
