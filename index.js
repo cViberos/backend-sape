@@ -20,7 +20,7 @@ require('./sockets/socket.js');
 
 // MIS RUTAS
 app.use( '/api/users', require('./routes/login.routes.js') );
-
+app.use( '/notificacion', require('./routes/webhook.routes.js'));
 
 // CORREMOS EL SERVIDOR
 server.listen(port, (err) => {
