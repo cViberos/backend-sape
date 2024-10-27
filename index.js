@@ -7,7 +7,7 @@ require('./database/dbconfig').dbConnection();
 // APP DE EXPRESS
 const app = express();
 
-// LECTURA Y PARSEO DEL BODY
+// LECTURA Y PARSEO DEL BODY (permite la recepción de POST,PUT, DELETE,etc..)
 app.use( express.json() );
 
 // PUERTO DE CONEXION

@@ -3,6 +3,32 @@ const Bcrypt = require('bcryptjs');
 const Usuario = require('../models/usuario');
 const {generarJWT} = require('../helpers/jwt');
 
+const allUsuarios = async(req, res = response) => {
+
+  try {
+    
+    // EXTRAER USUARIOS
+    const usuariosDB = await Usuario.find();
+    
+    // RESPUESTA AL CLIENTE
+    res.json({
+      ok: true,
+      usuarios: usuariosDB,
+    });
+
+  } catch (error) {
+    
+    // MENSAJE DE ERROR PARA EL CLIENTE
+    console.log(error);
+    return res.status(500).json({
+      ok:false,
+      msg: 'Hable con el administrador'
+    })
+
+  }
+};
+
+
 const crearUsuario = async(req, res = response ) => {
 
   const { email, password } = req.body;

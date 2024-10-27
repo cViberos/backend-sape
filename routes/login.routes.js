@@ -4,11 +4,15 @@
 
 const { Router } = require('express');
 const { check } = require('express-validator');
-const { crearUsuario,login, renewToken } = require('../controllers/ctrl_login');
+const { crearUsuario,login, renewToken, allUsuarios } = require('../controllers/ctrl_login');
 const { validarCampos } = require('../middlewares/validar-campos');
 const { validarJWT } = require('../middlewares/validar-jwt');
 
 const router = Router();
+
+// PRUEBA DE USUARIOS
+reouter.get( '/test',[],allUsuarios);
+
 
 // NUEVO USUARIO
 router.post( '/new', [
