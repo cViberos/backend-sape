@@ -11,7 +11,7 @@ const { validarJWT } = require('../middlewares/validar-jwt');
 const router = Router();
 
 // PRUEBA DE USUARIOS
-reouter.get( '/test',[],allUsuarios);
+reouter.get( '/test',allUsuarios);
 
 
 // NUEVO USUARIO
